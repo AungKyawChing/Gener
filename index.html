@@ -87,7 +87,7 @@
       const profitPaid = profit;
       const payment = paymentAmount;
       const totalPaid = profitPaid + payment;
-      const remainingLoan = loanAmount - totalPaid;
+      const remainingLoan = loanAmount - payment;
       const nextMonthProfit = remainingLoan * profitRate / 100;
 
       const result = `
@@ -101,7 +101,7 @@ ${nameInput.value},
 মোট দিয়েছেন = ( ${profitPaid} + ${payment} ) = ${totalPaid} টাকা
 
 তাহলে,
-লোন রইলো =  ( ${loanAmount} - ${totalPaid} ) = ${remainingLoan} টাকা
+লোন রইলো =  ( ${loanAmount} - ${payment} ) = ${remainingLoan} টাকা
 আগামী মাসে মুনাফা আসবে = ( ${remainingLoan} × ${profitRate}% ) = ${nextMonthProfit} টাকা
 `;
 
