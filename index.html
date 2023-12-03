@@ -54,15 +54,18 @@
       <h1>লোন হিসাব</h1>
     </div>
     <div class="form">
-      <input type="text" placeholder="নাম" id="name" value="আপনার">
-      <input type="text" placeholder="লোনের পরিমাণ" id="loan-amount">
-      <input type="text" placeholder="মুনাফার হার" id="profit-rate">
-      <input type="text" placeholder="পরিশোধের পরিমাণ" id="payment-amount">
+      নামঃ-
+      <input type="text" placeholder="নাম" id="name" value="আপনার"><br>
+      লোনের পরিমাণঃ-
+      <input type="text" placeholder="লোনের পরিমাণ" id="loan-amount"><br>
+      মুনাফার হারঃ-
+      <input type="text" placeholder="মুনাফার হার" id="profit-rate"><br>
+      পরিশোধের পরিমাণঃ-
+      <input type="text" placeholder="পরিশোধের পরিমাণ" id="payment-amount"><br>
       <button type="button" id="calculate">হিসাব করুন</button>
     </div>
     <div class="result">
       <pre id="result-text"></pre>
-      <button type="button" id="copy">কপি করুন</button>
     </div>
   </div>
 
@@ -104,22 +107,6 @@ ${nameInput.value},
 
       resultText.innerHTML = result;
     });
-
-    copyButton.addEventListener('click', () => {
-  const resultTextValue = resultText.innerHTML;
-  const resultTextSelection = resultText.selectionStart;
-  const resultTextRange = document.createRange();
-  resultTextRange.setStart(resultText, resultTextSelection);
-  resultTextRange.setEnd(resultText, resultTextSelection);
-  const resultTextCopyableData = resultTextRange.toString();
-
-  // Copy the text to the clipboard
-  navigator.clipboard.writeText(resultTextCopyableData);
-
-  // Display an alert message indicating successful copying
-  alert('Text copied successfully!');
-});
-
   </script>
 </body>
 </html>
