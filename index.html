@@ -54,6 +54,7 @@
       <h1>লোন হিসাব</h1>
     </div>
     <div class="form">
+      <input type="text" placeholder="নাম" id="name" value="আপনার">
       <input type="text" placeholder="লোনের পরিমাণ" id="loan-amount">
       <input type="text" placeholder="মুনাফার হার" id="profit-rate">
       <input type="text" placeholder="পরিশোধের পরিমাণ" id="payment-amount">
@@ -66,6 +67,7 @@
   </div>
 
   <script>
+		const nameInput = document.querySelector('#name');
     const loanAmountInput = document.querySelector('#loan-amount');
     const profitRateInput = document.querySelector('#profit-rate');
     const paymentAmountInput = document.querySelector('#payment-amount');
@@ -86,6 +88,7 @@
       const nextMonthProfit = remainingLoan * profitRate / 100;
 
       const result = `
+${nameInput},
 লোন ছিল = ${loanAmount} টাকা
 মুনাফা এসেছে = ( ${loanAmount} × ${profitRate}% ) = ${profit} টাকা
 
