@@ -103,14 +103,20 @@
     });
 
     copyButton.addEventListener('click', () => {
-      const resultTextValue = resultText.innerHTML;
-      const resultTextSelection = resultText.selectionStart;
-      const resultTextRange = document.createRange();
-      resultTextRange.setStart(resultText, resultTextSelection);
-      resultTextRange.setEnd(resultText, resultTextSelection);
-      const resultTextCopyableData = resultTextRange.toString();
-      navigator.clipboard.writeText(resultTextCopyableData);
-    });
+  const resultTextValue = resultText.innerHTML;
+  const resultTextSelection = resultText.selectionStart;
+  const resultTextRange = document.createRange();
+  resultTextRange.setStart(resultText, resultTextSelection);
+  resultTextRange.setEnd(resultText, resultTextSelection);
+  const resultTextCopyableData = resultTextRange.toString();
+
+  // Copy the text to the clipboard
+  navigator.clipboard.writeText(resultTextCopyableData);
+
+  // Display an alert message indicating successful copying
+  alert('Text copied successfully!');
+});
+
   </script>
 </body>
 </html>
