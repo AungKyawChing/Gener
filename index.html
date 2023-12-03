@@ -67,7 +67,7 @@
   </div>
 
   <script>
-		const nameInput = document.querySelector('#name');
+    const nameInput = document.querySelector('#name');
     const loanAmountInput = document.querySelector('#loan-amount');
     const profitRateInput = document.querySelector('#profit-rate');
     const paymentAmountInput = document.querySelector('#payment-amount');
@@ -88,7 +88,7 @@
       const nextMonthProfit = remainingLoan * profitRate / 100;
 
       const result = `
-${nameInput},
+${nameInput.value},
 লোন ছিল = ${loanAmount} টাকা
 মুনাফা এসেছে = ( ${loanAmount} × ${profitRate}% ) = ${profit} টাকা
 
